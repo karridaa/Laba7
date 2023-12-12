@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karridaa BeatStore - Лучшие биты только тут</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta name="keywords" content="битмейкинг, биты, музыка, статья">
+    <meta name="description" content="Лучшие биты от профессиональных продюсеров только у нас. Доступные цены, удобный заказ, быстрое выполнение. Спешите!">
+    <style>
+        html {
+            font-family: sans-serif;
+            color: rgb(195, 123, 228);
+            font-size: 18px;
+            font-weight: 400;
+            height: 100%;
+        }
+        body {
+            margin: 0px;
+            background-color: #6b3696;
+            position: sticky;
+            height: 100%;
+        }
+        .header {
+            background-color: #a94ff3;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            flex-direction: column-reverse;
+            padding: 10px;
+            border-bottom: 100px black;
+        }
+        .link-button {
+            margin: 5px;
+            background-color: #3f1e55;
+            border: 0px;
+
+        }
+        .footer {
+            background-color: #441b50;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50em;
+            font-size: 10px;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            font-size: 19px;
+        }
+        .plugin-image {
+            height: auto;
+            padding: 0em;
+            max-width: 50%;
+            max-height: 50%;
+            box-shadow: 5px 5px 50px 1px #211a3a;
+            border: 0px;
+            margin-top: 2.3em;
+            margin-left: 0.3em;
+            height: 10em;
+            border-radius: 5px;
+        }
+        .first-description {
+            display: inline-block;
+            position: absolute;
+            text-wrap: wrap;
+            padding: 3em;
+        }
+        .second-description {
+            display: inline-block;
+            position: absolute;
+            text-wrap: wrap;
+            padding: 3em;
+        }
+        .searchbar-site {
+            width: 11em;
+            height: 1.5em;
+            border: 0px solid #f10000;
+            border-radius: 4px;
+            background-color: #9100f1;
+        }
+        .link-button {
+            width: 4em;
+            height: 3em;
+            color: #511655;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            background: #a037c0;
+            border: none;
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .link-button:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            background-color: #f93dff;
+            border-radius: 5px;
+            transition: all 0.2s ease-in-out;
+        }
+        .link-button:hover {
+            color: #721212;
+        }
+        .link-button:hover:after {
+            left: 0;
+            width: 100%;
+        }
+        .link-button:active {
+            top: 0.5vw;
+        }
+        .logo {
+            position: absolute;
+            left: 1em;
+            top: 0.55em;
+            mix-blend-mode: multiply;
+            width: 8em;
+        }
+        .buy-button {
+            background-color: #6b3696;
+            border: 0px;
+            color: #a94ff3;
+            cursor: pointer;
+            width: 60%;
+            mix-blend-mode: multiply;
+        }
+        .right-comment {
+            display: flex;
+            justify-content: center;
+            width: 10em;
+            height: 12em;
+            background-color: #7b3385;
+            box-shadow: 5px 5px #211a3a;
+            position: absolute;
+            flex-wrap: wrap;
+            right: 0;
+            margin-right: 6em;
+            padding: 1em;
+            margin-top: 6em;
+            border-radius: 1em;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .left-comment {
+            display: flex;
+            justify-content: center;
+            width: 10em;
+            height: 14em;
+            background-color: #7b3385;
+            box-shadow: 5px 5px #211a3a;
+            position: absolute;
+            flex-wrap: wrap;
+            left: 0;
+            margin-left: 6em;
+            padding: 1em;
+            margin-top: 6em;
+            border-radius: 1em;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .contact-bar {
+            display: inline-block;
+        }
+        .more-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .first-description em {
+            color: rgb(39, 108, 255);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .second-description em {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(250, 89, 39);
+        }
+        .contact-bar {
+            position: absolute;
+            height: 2em;
+            width: 30%;
+            margin-top: 3em;
+            margin-left: 4vw;
+            align-self: center;
+            text-align: center;
+        }
+        .contact-bar:before {
+            content: '';
+            color: #bdbdbd;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            bottom: 0;
+            left: 0.625rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .contact-bar::placeholder {
+            color: #750085;
+            opacity: 0.4;
+            font-weight: bold;
+            font-size: 10px;
+        }
+        .src {
+            background-color: #a94ff3;
+            color: #211a3a;
+            border: 0px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        i {
+            color: #bdbdbd;
+        }
+        @media (max-width: 900px) {
+            .plugin-image {
+                width: 170vw;
+                max-width: 50vw;
+                height: 20%;
+            }
+            .first-description {
+                font-size: 3vw;
+            }
+            .second-description {
+                font-size: 3vw;
+            }
+            .comment-ad {
+                font-size: 3vw;
+            }
+            .left-comment {
+                margin-top: 23em;
+                margin-left: 5em;
+                height: 11em;
+            }
+            .right-comment {
+                margin-top: 7em;
+                margin-left: 5em;
+                height: 12em;
+            }
+            .footer {
+                margin-top: 115vw;
+            }
+            .logo {
+                width: 25vw;
+                max-height: 50px;
+                max-width: 120px;
+                margin-top: 0.1em;
+                margin-left: 0;
+                align-self: center;
+                left: 0;
+                margin-left: 0.3em;
+            }
+            .link-button {
+                width: 4em;
+                align-items: center;
+                font-size: 10px;
+                font-weight: bold;
+            }
+            .searchbar-site {
+                height: auto;
+                width: 9em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main-page">
+    <div class="header" id="head">
+        <div class="logo">
+            <a href="#"><img src="logo1.jpg" class="logo" id="logo"></a>
+        </div>
+        <div class="header-menu">
+                <button class="link-button" id="menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <button class="link-button" id="plug"><i class="fa fa-book" aria-hidden="true"></i></button>
+                <button class="link-button" id="info"><i class="fa fa-info" aria-hidden="true"></i></button>
+        </div>
+        <div class="searchbar">
+            <input type="text" class="searchbar-site" id="search-input"><button class="src" id="search-btn" onclick="searchText()"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="image-text-first">
+            <img src="autotune.jpg" class="plugin-image">
+            <p class="first-description" id="first-descr"><em>Antares AutoTune</em> - популярный плагин среди артистов</p>
+                <button class="buy-button" id="anta-button" onclick="changetext1()"> Больше </button>
+        </div>
+        <div class="image-text-second">
+            <img src="analogtune.jpg" class="plugin-image">
+            <p class="second-description" id="second-descr"><em>Melodyne</em> - любимчик опытных продюсеров</p>
+                <button class="buy-button" id="melo-button" onclick="changetext2()"> Больше </button> 
+        </div>
+
+        <div class="more-info">
+            <p class="comment-ad left-comment">Быстрое и качественное сведение Вашего вокала прямо на студии. Доступные цены для каждого из Вас</p>
+            <p class="comment-ad right-comment">Профессиональные продюсеры с большим опытом обработки вокала. Работа с любым звуком, создание новых битов прямо на студии</p>
+        </div>
+        <div class="mail-contact">
+            <input type="text" placeholder="Задайте вопрос" class="contact-bar" id="mailto">
+        </div>
+    </div>
+
+    <div class="footer" id="foot">
+        <p class="contact-info">&copy;karridaa beats<br>Все права защищены<br>The Best Track of 2023<br></p>
+        <p class="contact info">karridaaonthebeat@gmail.com<br>Проспект Держинского 95, Минск<br>+375445844154</p>
+    </div>
+</div>
+<script>
+    function changetext1() {
+        let newdescr1 = "<em>Antares</em> является одним из самых популярных автотюнов среди всех исполнителей: от новомодных артистов до старичков индустрии";
+        document.getElementById('first-descr').innerHTML = newdescr1;
+        document.getElementById('anta-button').innerHTML = "Свернуть"
+        document.getElementById('anta-button').onclick = function() {
+            document.getElementById('first-descr').innerHTML = "<em>Antares AutoTune</em> - популярный плагин среди артистов";
+            document.getElementById('anta-button').innerHTML = "Больше";
+        }
+    }
+        function changetext2() {
+        let newdescr2 = "<em>Melodyne</em> является плагином для ручной настройки высоты вокала. Универсальность этого плагина и прожвинула его в верх рынка. Частый гость в компьютере профессиональных продюсеров.";
+        document.getElementById('second-descr').innerHTML = newdescr2;
+        document.getElementById('melo-button').innerHTML = "Свернуть";
+        document.getElementById('melo-button').onclick = function change1() {
+            document.getElementById('second-descr').innerHTML = "<em>Melodyne</em> - любимчик профессиональных продюсеров";
+            document.getElementById('melo-button').innerHTML = "Больше";
+            return changetext2;
+        }
+    }
+</script>
+<script>
+    document.getElementById('menu').onclick = function() {
+        document.getElementById('head').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    }
+    document.getElementById('plug').onclick = function() {
+        document.getElementById('first-descr').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    }
+    document.getElementById('info').onclick = function() {
+        document.getElementById('foot').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    }
+    document.getElementById('logo').onclick = function() {
+        document.getElementById('head').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    }
+</script>
+<script>
+    function searchText() {
+        alert('Я доделаю поиск, когда это будет не лендинг')
+        return 0;
+    }
+</script>
+<script>
+    var  mailto = document.getElementById('mailto');
+mailto.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {  
+        validate(e);
+    }
+});
+
+function validate(e) {
+    alert('Ваше письмо отправлено! Ждите ответа!')
+    document.getElementById('mailto').value = ''
+}
+</script>
+</body>
+</html>
